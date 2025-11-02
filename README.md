@@ -22,10 +22,10 @@ Langkah-langkah pengerjaan:
 4. git remote add origin untuk menghubungkan repositori
    <img width="1098" height="201" alt="Screenshot 2025-11-02 150356" src="https://github.com/user-attachments/assets/f0cf4d01-001a-4d43-8367-34335b04fe8d" />
 5. git add file dan commit -m Screenshot Websit
-6. <img width="1100" height="227" alt="Screenshot 2025-11-02 145541" src="https://github.com/user-attachments/assets/f9515e08-a0d7-4b5b-a755-181e43378757" />
-7. git push
+   <img width="1100" height="227" alt="Screenshot 2025-11-02 145541" src="https://github.com/user-attachments/assets/f9515e08-a0d7-4b5b-a755-181e43378757" />
+6. git push
    <img width="1097" height="339" alt="Screenshot 2025-11-02 150327" src="https://github.com/user-attachments/assets/13dc7ff1-a0cb-4e29-80d2-894a3a0c158d" />
-8. git log --graph --oneline
+7. git log --graph --oneline
    <img width="1104" height="353" alt="Screenshot 2025-11-02 150526" src="https://github.com/user-attachments/assets/18c4b372-f163-47c6-81af-10f50e61e138" />
 
    
