@@ -1,0 +1,400 @@
+/* --- 1. RESET DAN VARIABEL GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    /* Palet Warna */
+    --primary-color: #ec4899; /* Pink Utama (Rose 500) */
+    --secondary-color: #be185d; /* Pink Gelap (Rose 800) */
+    --accent-light: #fbcfe8; /* Pink Pastel Terang (Pink 200) */
+    --background-light: #fff1f2; /* Background Paling Terang (Pink 50) */
+    --background-white: #ffffff;
+    --border-color: #fce7f3; 
+    --text-dark: #1f2937; /* Gray 800 */
+    --text-medium: #4b5563; /* Gray 600 */
+    --shadow-base: rgba(0, 0, 0, 0.08);
+
+    /* VARIABEL TINGGI HEADER */
+    --header-height: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+    overflow-x: hidden; 
+}
+
+/* --- 2. UTILITY CLASSES --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 120px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    scroll-margin-top: var(--header-height); 
+    border-bottom: 5px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: var(--text-medium);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* --- 3. HEADER & NAVIGASI (Fixed) --- */
+header {
+    background-color: var(--background-white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 4. BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 30px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 15px rgba(236, 72, 153, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--accent-light);
+}
+
+/* --- 5. SECTION STYLES --- */
+
+/* HOME */
+.hero {
+    background: linear-gradient(135deg, var(--background-light), var(--accent-light));
+    padding-top: var(--header-height); 
+    min-height: 100vh;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--background-white);
+    box-shadow: 0 0 0 8px var(--accent-light), 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+    background-color: var(--background-white);
+}
+
+.about-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    flex-wrap: wrap; 
+}
+
+.about-image {
+    min-width: 300px;
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--shadow-base);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h3 {
+    font-size: 26px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-medium);
+    text-align: justify;
+}
+
+/* SKILLS, ACHIEVEMENTS, PROJECTS GRID BASE */
+.skills-grid, .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.skill-card, .achievement-card {
+    background-color: var(--background-white);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 6px 20px var(--shadow-base);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.achievement-card {
+    background-color: var(--accent-light);
+}
+
+/* --- PROJECTS CUSTOM STYLES --- */
+
+.projects {
+    background-color: var(--background-light);
+}
+
+.projects-grid {
+    /* Menggunakan grid 2 kolom di desktop */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-card {
+    background-color: var(--background-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--shadow-base);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; 
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-image-wrapper {
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.project-card .p-6 {
+    padding: 24px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.project-description {
+    color: var(--text-medium);
+    font-size: 15px;
+}
+
+/* CONTACT */
+#contact {
+    min-height: auto; 
+    padding-top: calc(120px + var(--header-height)); 
+    padding-bottom: 120px;
+    border-bottom: none; 
+}
+
+.contact {
+    background: linear-gradient(135deg, var(--accent-light), var(--background-white));
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px;
+    background-color: var(--background-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-white);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 15px;
+}
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 7. RESPONSIVE DESIGN --- */
+
+/* Tablet View */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    :root {
+        --header-height: 120px; 
+    }
+
+    .section {
+        scroll-margin-top: var(--header-height); 
+        min-height: auto; /* Agar tidak terlalu panjang di mobile */
+    }
+
+    .hero {
+        padding-top: var(--header-height);
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    :root {
+        --header-height: 150px; 
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .skills-grid,
+    .achievements-grid,
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 kolom penuh */
+    }
+}
