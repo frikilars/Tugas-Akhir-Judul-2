@@ -10,7 +10,7 @@
     --primary-color: #ec4899; /* Pink Utama (Rose 500) */
     --secondary-color: #be185d; /* Pink Gelap (Rose 800) */
     --accent-light: #fbcfe8; /* Pink Pastel Terang (Pink 200) */
-    --background-light: #fff1f2; /* Background Paling Terang (Pink 50) */
+    --background-light: #9b787a; /* Background Paling Terang (Pink 50) */
     --background-white: #ffffff;
     --border-color: #fce7f3; 
     --text-dark: #1f2937; /* Gray 800 */
@@ -70,7 +70,7 @@ body {
 /* --- 3. HEADER & NAVIGASI (Fixed) --- */
 header {
     background-color: var(--background-white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(8, 7, 7, 0.05);
     padding: 15px 0;
     position: fixed; 
     width: 100%;
@@ -125,7 +125,7 @@ nav a:hover {
     background-color: var(--primary-color);
     color: var(--background-white);
     border-color: var(--primary-color);
-    box-shadow: 0 8px 15px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 8px 15px rgba(229, 212, 220, 0.2);
 }
 
 .btn-secondary {
